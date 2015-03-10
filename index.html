@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="./style/style.css">
 </head>
 
 <body ontouchstart="" style="zoom: 1;" data-twttr-rendered="true">
@@ -13,7 +13,8 @@
 
 		<a href="#" id="link" target="_blank">Mulligan</a>
 
-		<a id="button" href="mailto:communications@hackreactor.com?subject=I'm a big baby">
+		<a id="button" href="">
+			<!-- mailto:communications@hackreactor.com?subject=I'm a big baby -->
 			<div class="one"></div>
 			<div class="cover left"></div>
 			<div class="cover right"></div>
@@ -33,5 +34,11 @@
 		</div>
 
 	</div>
+	<script src="/client/bower_components/jquery/dist/jquery.js"></script>
+	<script>
+     $('#link').on('click', function() {
+       $.get('/invoke');
+     });
+	</script>
 </body>
 </html>

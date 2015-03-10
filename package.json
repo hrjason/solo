@@ -1,0 +1,26 @@
+{
+  "name": "mulligan-button",
+  "version": "0.0.1",
+  "description": "The quitters button",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonjchang/2015-02-solo.git"
+  },
+  "keywords": [
+    "mulligan",
+    "button"
+  ],
+  "author": "Jason Chang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonjchang/2015-02-solo/issues"
+  },
+  "homepage": "https://github.com/jasonjchang/2015-02-solo",
+  "dependencies": {
+    "express": "^4.12.2"
+  }
+}
