@@ -24,13 +24,10 @@ app.get('/invoke', function(req, res) {
   }); 
 
   command.on('close', function(code) {
-    if (code === 0) {
-      console.log(code);
-      console.log('command closed');
-      res.send(Buffer);  
-    } else {
-      res.send(500); // when the script fails, generate a Server Error HTTP response
-    }
+    res.writeHead(200, {
+      "Content-Type" : "text/plain"
+    });
+    res.end('finished');
   });
 });
 
