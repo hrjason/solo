@@ -1,0 +1,46 @@
+body {margin: 0px; background: #336bff; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 12px; color: #FFF; }
+
+#container { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; min-height: 450px; min-width: 300px; }
+body.embed #container { min-height: 0px; }
+body.show-embed-code #container { min-height: 500px; }
+
+#link { display: none; position: absolute; left: 0px; bottom: 20px; width: 100%; width: 100%; text-align: center; color: #FFF; text-decoration: none; font-size: 16px; opacity: 0.7; }
+body.embed #link { display: block; }
+
+#button { position: absolute; z-index: 100; left: 50%; top: 50%; width: 300px; height: 260px; margin-left: -150px; margin-top: -160px; display: block; -webkit-user-select: none; transition: margin 300ms; }
+body.show-embed-code #button { margin-top: -250px; }
+#button .one { position: absolute; z-index: 190; left: 20px; top: 0px; width: 260px; height: 200px; background: url('../img/logo.png') center center no-repeat #062d95; background-size: 220px auto; border-radius: 50%; transition: top 200ms; }
+#button:hover .one { top: -5px; }
+#button:active .one,
+#button .one:active { top: 10px; }
+#button .cover { position: absolute; z-index: 180; top: 100px; width: 20px; height: 30px; background: #002381; transition: top 200ms, height 200ms; }
+#button:hover .cover { top: 95px; height: 35px; }
+#button:active .cover,
+#button .cover:active { top: 110px; height: 20px; }
+#button .cover.left { left: 20px; }
+#button .cover.right { right: 20px; }
+#button .two { position: absolute; z-index: 170; left: 20px; top: 25px; width: 260px; height: 200px; background: #002381; border-radius: 50%; }
+#button .three { position: absolute; z-index: 160; left: 5px; top: 15px; width: 290px; height: 225px; background: #FFF; border-radius: 50%; }
+#button .four { position: absolute; z-index: 150; left: 0px; top: 20px; width: 300px; height: 230px; background: #c8c8c8; border-radius: 50%; }
+#button .five { position: absolute; z-index: 140; left: 0px; top: 30px; width: 300px; height: 230px; background: #8c8b8b; border-radius: 50%; box-shadow: 0px 0px 100px -30px #000; }
+
+#embed-code { position: absolute; left: 50%; top: 50%; width: 300px; height: 0px; margin-left: -150px; margin-top: 100px; text-align: center; opacity: 0; overflow: hidden; transition: opacity 300ms, height 0s 300ms, margin 300ms; }
+body.show-embed-code #embed-code { margin-top: 30px; height: auto; opacity: 1; transition: opacity 300ms, height 0s 0s, margin 300ms; }
+#embed-code textarea { width: 280px; height: 100px; border: none; padding: 10px; margin-top: 10px; }
+
+#share { position: absolute; left: 50%; bottom: 20px; width: 300px; margin-left: -150px; text-align: center; }
+body.embed #share { display: none; }
+#share .fb-share-button { position: relative; bottom: 3px; margin-right: 5px; margin-left: 25px; }
+#share a { display: inline-block; color: #FFF; text-decoration: none; opacity: 0.7; margin-top: 5px; }
+
+#lightbox { position: fixed; z-index: 200; left: 0px; top: 0px; width: 100%; height: 0%; opacity: 0; overflow: hidden; transition: opacity 300ms, height 0s 300ms; }
+#lightbox.open { height: 100%; opacity: 1; transition: opacity 300ms, height 0s 0s; }
+#lightbox .overlay { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background: #000; opacity: 0.7; filter: alpha(opacity=70); }
+#lightbox .inner { position: absolute; left: 0px; top: 50%; right: 0px; text-align: center; margin-top: 0px; padding: 0px 20px; transition: margin-top 1s; }
+#lightbox.open .inner { margin-top: -200px; }
+#lightbox .inner h1 { font-size: 24px; font-weight: 900; }
+#lightbox .inner .close { display: inline-block; width: 30px; height: 30px; border: 1px solid #FFF; text-align: center; line-height: 28px; font-size: 24px; color: #FFF; text-decoration: none; border-radius: 50%; margin-top: 20px; transition: background 300ms, color 300ms; }
+#lightbox .inner .close:hover { background: #FFF; color: #002381; }
+
+.d { display: block; }
+.m { display: none; }
